@@ -1,5 +1,6 @@
 package com.match.UserManagement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,5 +34,6 @@ public class Address {
     private int pincode;
 
     @OneToOne(mappedBy = "address")
+    @JsonIgnore
     private User user;
 }

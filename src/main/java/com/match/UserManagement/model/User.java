@@ -1,5 +1,6 @@
 package com.match.UserManagement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +22,8 @@ public class User {
     private String firstName;
     @NonNull
     private String lastName;
+    @NonNull
+    private String gender;
     @NonNull
     private String email;
     @NonNull

@@ -1,5 +1,6 @@
 package com.match.UserManagement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,6 +18,7 @@ public class Images {
     private long imageId;
 
     @OneToOne(mappedBy = "images")
+    @JsonIgnore
     private User user;
 
     private String profilePictureUrl;
